@@ -52,7 +52,7 @@
             if (typeof this.callbacks[data.uuid] === "function") this.callbacks[data.uuid](data.data)
             if (!data.data.continue) {
                 delete this.callbacks[data.uuid]
-                this.ChatHistory.push({ role: 2, content: data.data.content })
+                this.ChatHistory.push({ role: 1, content: data.data.content })
             }
         }
         this.send = (content, callback) => {

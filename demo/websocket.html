@@ -77,13 +77,13 @@
         $I.disabled = true
         const inputContent = $I.value
         const $me = document.createElement("p")
-        $me.innerText = `Me> ${inputContent}`
+        $me.innerText = `我> ${inputContent}`
         $H.appendChild($me)
         const $Atri = document.createElement("span")
         $H.appendChild($Atri)
         RealCozeAPI.send(inputContent, (data) => {
             console.log(data)
-            $Atri.innerText = `Atri> ${data.content}`
+            $Atri.innerText = `瑞瑞和莉莉丝> ${data.content}`
             if (!data.continue) {
                 $B.disabled = false
                 $I.disabled = false
